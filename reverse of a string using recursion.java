@@ -1,4 +1,14 @@
 import java.util.*;
+class Rev
+{
+   public static String reverse(String sentence) 
+         {
+            if (sentence.isEmpty())
+                return sentence;
+            else
+                return reverse(sentence.substring(1)) + sentence.charAt(0);
+        } 
+}
 class Main
 {
     public static void main (String[] args)
@@ -8,11 +18,7 @@ class Main
         String alp=d.nextLine();
         String rev="";
         int l=alp.length();
-        for(int i=l-1;i>=0;i--)
-        {
-            char ch=alp.charAt(i);
-            rev=rev+ch;
-        }
+        rev=Rev.reverse(alp);
         System.out.print("The reverse of the string is "+rev);
     }
 }
