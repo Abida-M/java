@@ -17,7 +17,6 @@ System.out.print("Enter a string: ");
 String input= sc.nextLine();               
 md.update(input.getBytes());
 byte[] output=md.digest();
-//System.out.println();
 System.out.println("SHA1(\""+input+"\")=");
 System.out.println(""+bytesToHex(output));
 }
